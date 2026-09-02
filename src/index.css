@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ExoB";
+  src: url("./assets/fonts/Exo2-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ExoR";
+  src: url("./assets/fonts/Exo2-Regular.ttf");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #100e0b;
+  min-height: 100vh;
+}
+
+@theme {
+  --color-pageBg: #10202e;
+  --color-dark-bg: #1a466d;
+  --color-card-bg: #1F2833;
+  --color-badge-bg: #03a7ad;
+  --color-main-text: #c5c6c7;
+  --color-statCardCol: #ffff;
+  --color-subtle-text: #7a7b7d;
+  --color-neon-cyan: #66FCF1;
+  --color-teal-accent: #45A29E;
+  --shadow-shadlol: 3.9px 2px 3px 1px rgb(0, 255, 255);
+  --shadow-hoverShad: 0 1px 3px 1px rgb(0, 255, 255);
+
+  --font-display: "ExoB";
+}
+
+.aura-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.aura-layer-1,
+.aura-layer-2,
+.aura-layer-3,
+.aura-layer-4,
+.aura-layer-5 {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.aura-layer-1 {
+  background: radial-gradient(circle at 30% 40%, rgba(14, 165, 233, 0.7) 0%, transparent 40%);
+  mix-blend-mode: screen;
+  filter: blur(175px);
+}
+
+.aura-layer-2 {
+  background: radial-gradient(circle at 70% 25%, rgba(56, 189, 248, 0.5) 0%, transparent 35%);
+  mix-blend-mode: screen;
+  filter: blur(200px);
+}
+
+.aura-layer-3 {
+  background: radial-gradient(circle at 50% 70%, rgba(99, 102, 241, 0.6) 0%, transparent 45%);
+  mix-blend-mode: screen;
+  filter: blur(200px);
+}
+
+.aura-layer-4 {
+  background: radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.4) 0%, transparent 30%);
+  mix-blend-mode: screen;
+  filter: blur(150px);
+}
+
+.aura-layer-5 {
+  background: radial-gradient(circle at 15% 80%, rgba(79, 70, 229, 0.3) 0%, transparent 25%);
+  mix-blend-mode: screen;
+  filter: blur(125px);
+}
+
+@media (min-width: 768px) {
+  .aura-layer-1 {
+    filter: blur(252px);
+  }
+
+  .aura-layer-2,
+  .aura-layer-3 {
+    filter: blur(260px);
+  }
+
+  .aura-layer-4 {
+    filter: blur(216px);
+  }
+
+  .aura-layer-5 {
+    filter: blur(180px);
+  }
+}
